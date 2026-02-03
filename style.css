@@ -1,0 +1,147 @@
+:root {
+  --bear-color: #d8b38a;
+  --bear-dark: #b89165;
+  --snout-color: #f3e5ab;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f8ff;
+}
+
+.bear-container {
+  position: relative;
+  width: 200px;
+  height: 300px;
+}
+
+/* Head & Features */
+.head {
+  position: absolute;
+  width: 150px;
+  height: 130px;
+  background: var(--bear-color);
+  border-radius: 50% 50% 45% 45%;
+  top: 40px;
+  left: 25px;
+  z-index: 5;
+  border: 2px solid #8b5e34;
+}
+
+.eye {
+  position: absolute;
+  width: 18px;
+  height: 22px;
+  background: #333;
+  border-radius: 50%;
+  top: 45px;
+}
+.eye.left { left: 35px; }
+.eye.right { right: 35px; }
+
+.eye::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+}
+
+.snout {
+  position: absolute;
+  width: 60px;
+  height: 45px;
+  background: var(--snout-color);
+  border-radius: 50%;
+  bottom: 15px;
+  left: 45px;
+}
+
+.nose {
+  width: 16px;
+  height: 10px;
+  background: #5d4037;
+  border-radius: 50%;
+  margin: 8px auto 0;
+}
+
+/* Ears */
+.ear {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: var(--bear-color);
+  border-radius: 50%;
+  top: 35px;
+  border: 2px solid #8b5e34;
+}
+.ear.left { left: 15px; }
+.ear.right { right: 135px; }
+
+/* Body & Limbs */
+.body {
+  position: absolute;
+  width: 120px;
+  height: 140px;
+  background: var(--bear-color);
+  border-radius: 50%;
+  top: 140px;
+  left: 40px;
+  border: 2px solid #8b5e34;
+}
+
+.arm {
+  position: absolute;
+  width: 40px;
+  height: 80px;
+  background: var(--bear-color);
+  border-radius: 20px;
+  top: 150px;
+  z-index: 6;
+  border: 2px solid #8b5e34;
+}
+.arm.left { left: 20px; transform: rotate(30deg); }
+.arm.right { right: 20px; transform: rotate(-30deg); }
+
+.leg {
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  background: var(--bear-color);
+  border-radius: 20px 20px 10px 10px;
+  bottom: 10px;
+  border: 2px solid #8b5e34;
+}
+.leg.left { left: 45px; }
+.leg.right { right: 45px; }
+
+/* The Flower */
+.flower {
+  position: absolute;
+  bottom: 110px;
+  left: 90px;
+  z-index: 10;
+}
+
+.stem {
+  width: 4px;
+  height: 60px;
+  background: #4caf50;
+}
+
+.petal {
+  width: 30px;
+  height: 30px;
+  background: #ff4081;
+  border-radius: 50% 50% 0 50%;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: -20px;
+  left: -13px;
+}
